@@ -1,20 +1,44 @@
+// resources/js/Components/Footer.jsx
 import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2a3740] text-white py-4 mt-auto">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-6 md:gap-20">
+    <footer className="bg-black text-white py-10 mt-16">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm text-center md:text-left">
         
-        <div className="flex items-center gap-2">
-          <img src="images/logo.png" alt="Logo" className="w-6 h-6" />
-          <span className="text-sm">&copy; MyScript {new Date().getFullYear()}.</span>
+        {/* Colonne 1 */}
+        <div>
+          <h4 className="font-bold mb-4 uppercase tracking-wide">Entreprise</h4>
+          <ul className="space-y-2">
+            <li><a href="/propos" className="hover:underline">À propos</a></li>
+            <li><a href="/carriere" className="hover:underline">Carrières</a></li>
+            <li><a href="/blog" className="hover:underline">Blog</a></li>
+          </ul>
         </div>
 
-        <div className="flex flex-wrap gap-4 text-sm justify-center">
-          <a href="/legal" className="hover:underline">Informations légales</a>
-          <a href="/preferences" className="hover:underline">Gérer mes préférences</a>
+        {/* Colonne 2 */}
+        <div>
+          <h4 className="font-bold mb-4 uppercase tracking-wide">Support</h4>
+          <ul className="space-y-2">
+            <li><a href="/contact" className="hover:underline">Contact</a></li>
+            <li><a href="/faq" className="hover:underline">FAQ</a></li>
+            <li><a href="/aide" className="hover:underline">Centre d’aide</a></li>
+          </ul>
         </div>
-        
+
+        {/* Colonne 3 */}
+        <div>
+          <h4 className="font-bold mb-4 uppercase tracking-wide">Légal</h4>
+          <ul className="space-y-2">
+            <li><a href="/mentions-legales" className="hover:underline">Mentions légales</a></li>
+            <li><a href="/cgu" className="hover:underline">Conditions générales</a></li>
+            <li><a href="/confidentialite" className="hover:underline">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="text-center text-xs mt-10 text-gray-400">
+        &copy; {new Date().getFullYear()} Auto Cleaner. Tous droits réservés.
       </div>
     </footer>
   );
